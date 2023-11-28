@@ -1,0 +1,56 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/dulanjana/drone_ws/devel/include/**",
+        "/home/dulanjana/fiverr_projects/dji_drone/devel/include/**",
+        "/home/dulanjana/fiverr_projects/dji_mavic/catkin_ws/devel/include/**",
+        "/home/dulanjana/fiverr_projects/hector_and_orb_slams/catkin_ws/devel/include/**",
+        "/home/dulanjana/Diyazen_Project/mapping/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/dulanjana/Diyazen_Project/mapping/catkin_ws/src/ros_astra_camera/include/**",
+        "/home/dulanjana/fiverr_projects/dji_mavic/catkin_ws/src/cobot_manipulator/include/**",
+        "/home/dulanjana/fiverr_projects/dji_drone/src/dji_drone/include/**",
+        "/home/dulanjana/fiverr_projects/dji_mavic/catkin_ws/src/dji_mavic/include/**",
+        "/home/dulanjana/drone_ws/src/sentinel_drone/task_1/edrone_client/include/**",
+        "/home/dulanjana/fiverr_projects/dji_drone/src/hector-quadrotor-noetic/hector_gazebo/hector_gazebo_plugins/include/**",
+        "/home/dulanjana/fiverr_projects/dji_drone/src/hector-quadrotor-noetic/hector_gazebo/hector_gazebo_thermal_camera/include/**",
+        "/home/dulanjana/fiverr_projects/hector_and_orb_slams/catkin_ws/src/hector_slam/hector_geotiff/include/**",
+        "/home/dulanjana/fiverr_projects/hector_and_orb_slams/catkin_ws/src/hector_slam/hector_map_tools/include/**",
+        "/home/dulanjana/fiverr_projects/hector_and_orb_slams/catkin_ws/src/hector_slam/hector_mapping/include/**",
+        "/home/dulanjana/fiverr_projects/hector_and_orb_slams/catkin_ws/src/hector_slam/hector_marker_drawing/include/**",
+        "/home/dulanjana/fiverr_projects/dji_drone/src/hector-quadrotor-noetic/hector_localization/hector_pose_estimation/include/**",
+        "/home/dulanjana/fiverr_projects/dji_drone/src/hector-quadrotor-noetic/hector_localization/hector_pose_estimation_core/include/**",
+        "/home/dulanjana/fiverr_projects/dji_drone/src/hector-quadrotor-noetic/hector_quadrotor/hector_quadrotor_controller/include/**",
+        "/home/dulanjana/fiverr_projects/dji_drone/src/hector-quadrotor-noetic/hector_quadrotor/hector_quadrotor_controller_gazebo/include/**",
+        "/home/dulanjana/fiverr_projects/dji_drone/src/hector-quadrotor-noetic/hector_quadrotor/hector_quadrotor_gazebo_plugins/include/**",
+        "/home/dulanjana/fiverr_projects/dji_drone/src/hector-quadrotor-noetic/hector_quadrotor/hector_quadrotor_model/include/**",
+        "/home/dulanjana/fiverr_projects/dji_drone/src/hector-quadrotor-noetic/hector_quadrotor/hector_quadrotor_pose_estimation/include/**",
+        "/home/dulanjana/fiverr_projects/dji_drone/src/hector-quadrotor-noetic/hector_quadrotor/hector_uav_msgs/include/**",
+        "/home/dulanjana/drone_ws/src/kair_drone/include/**",
+        "/home/dulanjana/drone_ws/src/sentinel_drone/task_1/mav_comm/mav_msgs/include/**",
+        "/home/dulanjana/drone_ws/src/sentinel_drone/task_1/mav_comm/mav_planning_msgs/include/**",
+        "/home/dulanjana/arm_ws/src/robot_arm/include/**",
+        "/home/dulanjana/fiverr_projects/hector_and_orb_slams/catkin_ws/src/robot_navigation/include/**",
+        "/home/dulanjana/fiverr_projects/hector_and_orb_slams/catkin_ws/src/robot_slam/include/**",
+        "/home/dulanjana/sd_ws/src/quadrotor/rotors_control/include/**",
+        "/home/dulanjana/sd_ws/src/quadrotor/rotors_edrone_interface/include/**",
+        "/home/dulanjana/sd_ws/src/quadrotor/rotors_gazebo/include/**",
+        "/home/dulanjana/drone_ws/src/sentinel_drone/task_1/rotors_gazebo_plugins/include/**",
+        "/home/dulanjana/drone_ws/src/sentinel_drone/whycon/include/**",
+        "/home/dulanjana/Diyazen_Project/mapping/catkin_ws/src/yocs_velocity_smoother/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

@@ -1,0 +1,20 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/dulanjana/drone_ws/devel/lib/python3/dist-packages",
+        "/home/dulanjana/fiverr_projects/dji_drone/devel/lib/python3/dist-packages",
+        "/home/dulanjana/fiverr_projects/dji_mavic/catkin_ws/devel/lib/python3/dist-packages",
+        "/home/dulanjana/fiverr_projects/hector_and_orb_slams/catkin_ws/devel/lib/python3/dist-packages",
+        "/home/dulanjana/Diyazen_Project/mapping/catkin_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages",
+        "/home/dulanjana/Diyazen_Project/charging_dock/src/roboclaw_python_library"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/dulanjana/drone_ws/devel/lib/python3/dist-packages",
+        "/home/dulanjana/fiverr_projects/dji_drone/devel/lib/python3/dist-packages",
+        "/home/dulanjana/fiverr_projects/dji_mavic/catkin_ws/devel/lib/python3/dist-packages",
+        "/home/dulanjana/fiverr_projects/hector_and_orb_slams/catkin_ws/devel/lib/python3/dist-packages",
+        "/home/dulanjana/Diyazen_Project/mapping/catkin_ws/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages",
+        "/home/dulanjana/Diyazen_Project/charging_dock/src/roboclaw_python_library"
+    ]
+}

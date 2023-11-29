@@ -22,6 +22,7 @@ void setup()
     // servos[i].write(0, SERVO_SPEED_MAX, false);
   }
   servos[GRIPPER_INDEX].write(120, SERVO_SPEED_MAX, true);
+  Serial.println("Ready");
 }
 
 void loop()
@@ -76,7 +77,7 @@ void updateServos()
     delay(50);
   }
 
-  servos[GRIPPER_INDEX].write(angles[GRIPPER_INDEX], SERVO_SPEED_MAX, true);
+  servos[GRIPPER_INDEX].write(angles[GRIPPER_INDEX], SERVO_SPEED_MAX, false);
 }
 
 void serialEvent()

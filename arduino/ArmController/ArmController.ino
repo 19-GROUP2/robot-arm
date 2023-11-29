@@ -3,7 +3,7 @@
 String inputString = "";    // a String to hold incoming data
 bool inputComplete = false; // whether the string is complete
 
-const int SERVO_SPEED_MAX = 30;                      // maximum speed of the servos
+const int SERVO_SPEED_MAX = 40;                      // maximum speed of the servos
 const int SERVO_COUNT = 5;                           // maximum number of angles to load
 const int servoPins[SERVO_COUNT] = {3, 5, 6, 9, 11}; // pins for the servos
 VarSpeedServo servos[SERVO_COUNT];                   // array of VarSpeedServo objects
@@ -60,6 +60,7 @@ void loop()
         if (servos[i].read() != angles[i])        
           wait = true;  
       }
+      delay(50);
     }
 
     inputString = "";

@@ -3,23 +3,21 @@
 String inputString = "";    // a String to hold incoming data
 bool inputComplete = false; // whether the string is complete
 
-const int SERVO_SPEED_MAX = 30; // maximum speed of the servos
-const int SERVO_COUNT = 5; // maximum number of angles to load
+const int SERVO_SPEED_MAX = 30;                      // maximum speed of the servos
+const int SERVO_COUNT = 5;                           // maximum number of angles to load
 const int servoPins[SERVO_COUNT] = {3, 5, 6, 9, 11}; // pins for the servos
-VarSpeedServo servos[SERVO_COUNT]; // array of VarSpeedServo objects
-int angles[SERVO_COUNT];   // array to store the loaded angles
-char sepChar = ' ';        // character used to separate the angles
-
-
+VarSpeedServo servos[SERVO_COUNT];                   // array of VarSpeedServo objects
+int angles[SERVO_COUNT];                             // array to store the loaded angles
+char sepChar = ' ';                                  // character used to separate the angles
 
 void setup()
-{ 
-  Serial.begin(9600);  
+{
+  Serial.begin(9600);
   inputString.reserve(200);
   for (int i = 0; i < SERVO_COUNT; i++)
   {
     servos[i].attach(servoPins[i]);
-    //servos[i].write(0, SERVO_SPEED_MAX, false);
+    // servos[i].write(0, SERVO_SPEED_MAX, false);
   }
 }
 
@@ -46,12 +44,23 @@ void loop()
 
     for (int i = 0; i < SERVO_COUNT; i++)
     {
-      
+
       Serial.print(angles[i]);
       Serial.print(' ');
-      servos[i].write(angles[i], SERVO_SPEED_MAX, true);
+      servos[i].write(angles[i], SERVO_SPEED_MAX, false);
     }
     Serial.println();
+
+    bool wait = true;
+    while (wait)
+    {
+      wait = false;
+      for (int i = 0; i < SERVO_COUNT; i++)
+      {
+        if (servos[i].read() != angles[i])        
+          wait = true;  
+      }
+    }
 
     inputString = "";
     inputComplete = false;

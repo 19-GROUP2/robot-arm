@@ -5,7 +5,6 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /MotionPlanning1
-        - /MotionPlanning1/Scene Geometry1
       Splitter Ratio: 0.5
     Tree Height: 381
   - Class: rviz/Help
@@ -225,6 +224,23 @@ Visualization Manager:
       Update Interval: 0
       Value: true
       Visual Enabled: true
+    - Class: rviz/TF
+      Enabled: false
+      Filter (blacklist): ""
+      Filter (whitelist): ""
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+      Marker Alpha: 1
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        {}
+      Update Interval: 0
+      Value: false
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -241,7 +257,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.4828507900238037
+      Distance: 0.9959698915481567
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -249,17 +265,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.75
       Focal Point:
-        X: -0.04264267906546593
-        Y: -0.10044581443071365
-        Z: -0.03149338811635971
+        X: 0.10963110625743866
+        Y: -0.08110062777996063
+        Z: 0.021003244444727898
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.2600003480911255
+      Pitch: 0.33500009775161743
       Target Frame: world
-      Yaw: 1.4485883712768555
+      Yaw: 4.678584098815918
     Saved: ~
 Window Geometry:
   Displays:

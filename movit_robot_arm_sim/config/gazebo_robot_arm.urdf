@@ -12,7 +12,7 @@
     <link name="base_link">
         <inertial>
             <origin xyz="0.0001172 -3.0598E-09 0.022304" rpy="0 0 0" />
-            <mass value="0.096038" />
+            <mass value="1.0" />
             <inertia ixx="0.00012799" ixy="-2.1831E-11" ixz="3.914E-06" iyy="0.00013766" iyz="4.0541E-13" izz="0.00020798" />
         </inertial>
         <visual>
@@ -58,7 +58,7 @@
         <parent link="base_link" />
         <child link="link_1" />
         <axis xyz="0 0 1" />
-        <limit lower="-1.5708" upper="1.5708" effort="30" velocity="1" />
+        <limit lower="-1.5708" upper="1.5708" effort="300" velocity="1" />
     </joint>
     <link name="link_2">
         <inertial>
@@ -87,7 +87,7 @@
         <parent link="link_1" />
         <child link="link_2" />
         <axis xyz="0 0 -1" />
-        <limit lower="-1.5708" upper="1.5708" effort="30" velocity="1" />
+        <limit lower="-1.5708" upper="1.5708" effort="300" velocity="1" />
     </joint>
     <link name="link_3">
         <inertial>
@@ -116,7 +116,7 @@
         <parent link="link_2" />
         <child link="link_3" />
         <axis xyz="0 0 -1" />
-        <limit lower="-1.5708" upper="1.5708" effort="30" velocity="1" />
+        <limit lower="-1.5708" upper="1.5708" effort="300" velocity="1" />
     </joint>
     <link name="link_4">
         <inertial>
@@ -145,7 +145,7 @@
         <parent link="link_3" />
         <child link="link_4" />
         <axis xyz="0 0 1" />
-        <limit lower="-1.5708" upper="1.5708" effort="30" velocity="1" />
+        <limit lower="-1.5708" upper="1.5708" effort="300" velocity="1" />
     </joint>
     <transmission name="link_1_trans">
         <type>transmission_interface/SimpleTransmission</type>

@@ -29,8 +29,8 @@ void loop()
 {
   if (inputComplete)
   {
-    for (int i = 0; i < 1; i++)
-      updateServos();
+    
+    updateServos();
 
     inputString = "";
     inputComplete = false;
@@ -61,9 +61,7 @@ void updateServos()
     Serial.print(angles[i]);
     Serial.print(' ');
     servos[i].write(angles[i], SERVO_SPEED_MAX, false);
-  }
-
-  Serial.println();
+  } 
 
   bool wait = true;
   while (wait)
@@ -78,6 +76,9 @@ void updateServos()
   }
 
   servos[GRIPPER_INDEX].write(angles[GRIPPER_INDEX], SERVO_SPEED_MAX, false);
+  delay(1000);
+
+  Serial.println();
 }
 
 void serialEvent()

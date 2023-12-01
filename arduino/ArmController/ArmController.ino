@@ -19,8 +19,9 @@ void setup()
   for (int i = 0; i < SERVO_COUNT; i++)
   {
     servos[i].attach(servoPins[i]);
-    // servos[i].write(0, SERVO_SPEED_MAX, false);
-  }  
+    servos[i].write(90, SERVO_SPEED_MAX, false);
+  }
+  delay(2000);
   Serial.println("Ready");
 }
 
@@ -61,8 +62,10 @@ void updateServos()
   } 
 
   bool wait = true;
-  while (wait)
+  int time = 0;
+  while (wait && time <5000)
   {
+//    break;
     wait = false;
     for (int i = 0; i < JOINT_COUNT; i++)
     {
@@ -70,6 +73,7 @@ void updateServos()
         wait = true;
     }
     delay(50);
+    time += 50;
   }
 
   servos[GRIPPER_INDEX].write(angles[GRIPPER_INDEX], SERVO_SPEED_MAX, false);
@@ -89,7 +93,3 @@ void serialEvent()
       inputComplete = true;
   }
 }
-
-/*
-12 258 69 1
-*/

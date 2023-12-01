@@ -1,4 +1,4 @@
-#include <VarSpeedServo.h>
+#include "CustomServo.hpp"
 
 String inputString = "";    // a String to hold incoming data
 bool inputComplete = false; // whether the string is complete
@@ -8,7 +8,7 @@ const int SERVO_COUNT = 5;
 const int JOINT_COUNT = SERVO_COUNT - 1;
 const int GRIPPER_INDEX = SERVO_COUNT - 1;           // maximum number of angles to load
 const int servoPins[SERVO_COUNT] = {3, 5, 6, 9, 11}; // pins for the servos
-VarSpeedServo servos[SERVO_COUNT];                   // array of VarSpeedServo objects
+CustomServo servos[SERVO_COUNT];                   // array of VarSpeedServo objects
 int angles[SERVO_COUNT];                             // array to store the loaded angles
 char sepChar = ' ';                                  // character used to separate the angles
 
@@ -18,8 +18,7 @@ void setup()
   inputString.reserve(200);
   for (int i = 0; i < SERVO_COUNT; i++)
   {
-    servos[i].attach(servoPins[i]);
-    servos[i].write(90, SERVO_SPEED_MAX, false);
+    servos[i].init(servoPins[i]);   
   }
   delay(2000);
   Serial.println("Ready");
@@ -57,26 +56,27 @@ void updateServos()
   for (int i = 0; i < JOINT_COUNT; i++)
   {
     Serial.print(angles[i]);
-    Serial.print(' ');
-    servos[i].write(angles[i], SERVO_SPEED_MAX, false);
+    Serial.print(' ');    
   } 
 
   bool wait = true;
   int time = 0;
-  while (wait && time <5000)
+  // while (wait && time <5000)
+  while (wait)
+
   {
 //    break;
     wait = false;
     for (int i = 0; i < JOINT_COUNT; i++)
     {
-      if (servos[i].read() != angles[i])
+      if (servos[i].move(angles[i]))
         wait = true;
     }
-    delay(50);
-    time += 50;
+    delay(2);
+    time += 2;
   }
 
-  servos[GRIPPER_INDEX].write(angles[GRIPPER_INDEX], SERVO_SPEED_MAX, false);
+  servos[GRIPPER_INDEX].write(angles[GRIPPER_INDEX]);
   delay(1000);
 
   Serial.println();

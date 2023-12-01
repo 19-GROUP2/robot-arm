@@ -72,8 +72,8 @@ void updateServos()
       if (servos[i].move(angles[i]))
         wait = true;
     }
-    delay(2);
-    time += 2;
+    delay(10);
+    time += 10;
   }
 
   servos[GRIPPER_INDEX].write(angles[GRIPPER_INDEX]);

@@ -1,14 +1,14 @@
-#include <VarSpeedServo.h>
+#include <ServoEasing.hpp>
 
 String inputString = "";    // a String to hold incoming data
 bool inputComplete = false; // whether the string is complete
 
-const int SERVO_SPEED_MAX = 30; // maximum speed of the servos
+const int SERVO_SPEED_MAX = 10; // maximum speed of the servos
 const int SERVO_COUNT = 5;
 const int JOINT_COUNT = SERVO_COUNT - 1;
 const int GRIPPER_INDEX = SERVO_COUNT - 1;           // maximum number of angles to load
 const int servoPins[SERVO_COUNT] = {3, 5, 6, 9, 11}; // pins for the servos
-VarSpeedServo servos[SERVO_COUNT];                   // array of VarSpeedServo objects
+ServoEasing servos[SERVO_COUNT];                   // array of VarSpeedServo objects
 int angles[SERVO_COUNT];                             // array to store the loaded angles
 char sepChar = ' ';                                  // character used to separate the angles
 
@@ -19,7 +19,7 @@ void setup()
   for (int i = 0; i < SERVO_COUNT; i++)
   {
     servos[i].attach(servoPins[i]);
-    servos[i].write(90, SERVO_SPEED_MAX, false);
+    servos[i].easeTo(90, SERVO_SPEED_MAX);
   }
   delay(2000);
   Serial.println("Ready");
@@ -58,7 +58,7 @@ void updateServos()
   {
     Serial.print(angles[i]);
     Serial.print(' ');
-    servos[i].write(angles[i], SERVO_SPEED_MAX, false);
+    servos[i].easeTo(angles[i], SERVO_SPEED_MAX);
   } 
 
   bool wait = true;
@@ -76,7 +76,7 @@ void updateServos()
     time += 50;
   }
 
-  servos[GRIPPER_INDEX].write(angles[GRIPPER_INDEX], SERVO_SPEED_MAX, false);
+  servos[GRIPPER_INDEX].easeTo(angles[GRIPPER_INDEX], SERVO_SPEED_MAX);
   delay(1000);
 
   Serial.println();

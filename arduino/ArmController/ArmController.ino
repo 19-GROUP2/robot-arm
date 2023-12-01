@@ -3,7 +3,7 @@
 String inputString = "";    // a String to hold incoming data
 bool inputComplete = false; // whether the string is complete
 
-const int SERVO_SPEED_MAX = 30; // maximum speed of the servos
+const int SERVO_SPEED_MAX = 15; // maximum speed of the servos
 const int SERVO_COUNT = 5;
 const int JOINT_COUNT = SERVO_COUNT - 1;
 const int GRIPPER_INDEX = SERVO_COUNT - 1;           // maximum number of angles to load

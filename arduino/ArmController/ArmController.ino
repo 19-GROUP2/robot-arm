@@ -20,18 +20,15 @@ void setup()
   {
     servos[i].attach(servoPins[i]);
     // servos[i].write(0, SERVO_SPEED_MAX, false);
-  }
-  servos[GRIPPER_INDEX].write(120, SERVO_SPEED_MAX, true);
+  }  
   Serial.println("Ready");
 }
 
 void loop()
 {
   if (inputComplete)
-  {
-    
+  {    
     updateServos();
-
     inputString = "";
     inputComplete = false;
   }
@@ -95,5 +92,4 @@ void serialEvent()
 
 /*
 12 258 69 1
-
 */
